@@ -12,7 +12,7 @@
 
 <hibernate-mapping package="com.github.conradovera.xmlmapping">
 
-    <class name="Event" table="EVENTS">
+    <class name="Event" table="EVENTSXML">
         <id name="id" column="EVENT_ID">
             <generator class="increment"/>
         </id>
