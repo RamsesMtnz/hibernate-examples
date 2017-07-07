@@ -23,7 +23,7 @@
     <property name="show_sql">true</property>
     <!-- Drop and re-create the database schema on startup -->
     <property name="hbm2ddl.auto">create</property>
-    <mapping resource="xmlmapping/Event.hbm.xml"/>
-    <mapping resource="xmlmapping/Lugar.hbm.xml"/>
+    <mapping resource="xmlmapping/EventRamses.hbm.xml"/>
+    <mapping resource="xmlmapping/LugarRamses.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

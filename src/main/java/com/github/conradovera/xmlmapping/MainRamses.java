@@ -16,7 +16,7 @@ public class MainRamses {
 		// TODO Auto-generated method stub
 		StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
 				//.configure() // configures settings from hibernate.cfg.xml
-				.configure("hibernateMySql.cfg.xml") // configures settings from maquina de ramses
+				.configure("hibernateMySqlRamses.cfg.xml") // configures settings from maquina de ramses
 				.build();
 		
 		SessionFactory sessionFactory = null;
@@ -41,12 +41,12 @@ public class MainRamses {
 		
 		//System.out.println(session.get(Event.class, 1L).getTitle());
 		
-		List<EventRamses> result = session.createQuery( "from Event" ).list();
+		List<EventRamses> result = session.createQuery( "from EventRamses" ).list();
 		for ( EventRamses event : result ) {
 			System.out.println( "Event (" + event.getDate() + ") : " + event.getTitle() + " : " + event.getIdLugar());
 		}
 		
-		List<LugarRamses> result2 = session.createQuery( "from Lugar" ).list();
+		List<LugarRamses> result2 = session.createQuery( "from LugarRamses" ).list();
 		for ( LugarRamses event : result2 ) {
 			System.out.println( "Hoy toca " + event.getNombre() + " en " + event.getCiudad() );
 		}
