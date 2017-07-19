@@ -32,14 +32,14 @@ public class Main {
 		
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		session.save( new EventRamses( "Our very first event!", new Date() ) );
-		session.save( new EventRamses( "A follow up event", new Date() ) );
+		session.save( new Event( "Our very first event!", new Date() ) );
+		session.save( new Event( "A follow up event", new Date() ) );
 		session.getTransaction().commit();
 		
 		//System.out.println(session.get(Event.class, 1L).getTitle());
 		
-		List<EventRamses> result = session.createQuery( "from Event" ).list();
-		for ( EventRamses event : result ) {
+		List<Event> result = session.createQuery( "from Event" ).list();
+		for ( Event event : result ) {
 			System.out.println( "Event (" + event.getDate() + ") : " + event.getTitle() );
 		}
 		

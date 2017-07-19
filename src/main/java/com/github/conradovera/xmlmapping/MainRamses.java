@@ -33,8 +33,8 @@ public class MainRamses {
 		
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		session.save( new EventRamses( "Our very first event!", new Date(),"1") );
-		session.save( new EventRamses( "A follow up event", new Date(),"2") );
+		session.save( new EventRamses( "Our very first event!", new Date(),1L) );
+		session.save( new EventRamses( "A follow up event", new Date(),2L) );
 		session.save(new LugarRamses("Viernes social","Rosarito, Campeche"));
 		session.save(new LugarRamses("A remojarse","Progreso, Yucatan"));
 		session.getTransaction().commit();
