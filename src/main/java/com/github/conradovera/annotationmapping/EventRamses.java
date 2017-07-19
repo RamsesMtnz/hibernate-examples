@@ -36,20 +36,21 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table( name = "EVENTS" )
-public class Event {
+public class EventRamses {
     private Long id;
-
+    private Long idLugar;
     private String title;
     private Date date;
 
-	public Event() {
+	public EventRamses() {
 		// this form used by Hibernate
 	}
 
-	public Event(String title, Date date) {
+	public EventRamses(String title, Date date, Long idLugar) {
 		// for application use, to create new events
 		this.title = title;
 		this.date = date;
+                this.idLugar=idLugar;
 	}
 
 	@Id
@@ -79,5 +80,19 @@ public class Event {
 
     public void setTitle(String title) {
 		this.title = title;
+    }
+
+    /**
+     * @return the idLugar
+     */
+    public Long getIdLugar() {
+        return idLugar;
+    }
+
+    /**
+     * @param idLugar the idLugar to set
+     */
+    public void setIdLugar(Long idLugar) {
+        this.idLugar = idLugar;
     }
 }

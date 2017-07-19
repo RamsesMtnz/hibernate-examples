@@ -27,7 +27,7 @@ import java.util.Date;
 
 public class EventRamses {
 	private Long id;
-	private String idLugar;
+	private Long idLugar;
 	private String title;
 	private Date date;
 
@@ -35,7 +35,7 @@ public class EventRamses {
 		// this form used by Hibernate
 	}
 
-	public EventRamses(String title, Date date, String idLugar) {
+	public EventRamses(String title, Date date, Long idLugar) {
 		// for application use, to create new events
 		this.title = title;
 		this.idLugar=idLugar;
@@ -66,11 +66,11 @@ public class EventRamses {
 		this.title = title;
 	}
 
-	public String getIdLugar() {
+	public Long getIdLugar() {
 		return idLugar;
 	}
 
-	public void setIdLugar(String idLugar) {
+	public void setIdLugar(Long idLugar) {
 		this.idLugar = idLugar;
 	}
 }
